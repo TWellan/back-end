@@ -1,4 +1,5 @@
 <?php
+#test
     required_one 'config.php';
     if (isset($POST['pseudo']) && isset($_POST['email'])  && isset($_POST['password'])  && isset($_POST['password2'] )
     {
