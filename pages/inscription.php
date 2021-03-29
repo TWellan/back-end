@@ -31,7 +31,7 @@
         </div>
 </body>
 </html>
-
+<!-- le code en bas est identique à celui au-dessus, mais en PHP -->
 
 
 <?php

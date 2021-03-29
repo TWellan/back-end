@@ -1,5 +1,5 @@
 <?php
-#test
+#Source de l'aide : https://www.youtube.com/watch?v=jEgzxXCB9-w
     required_one 'config.php';
     if (isset($POST['pseudo']) && isset($_POST['email'])  && isset($_POST['password'])  && isset($_POST['password2'] )
     {
@@ -15,15 +15,15 @@
 
         if ($row == 0)
         {
-                if(strlen($pseudo) <= 200)
+                if(strlen($pseudo) <= 200) #caractère limité pour le pseudo (maximum 200). Ici, il vérifie si le pseudo ne dépasse pas la valeur
                 {
-                    if(strlen($email)<= 120)
+                    if(strlen($email)<= 120) #idem que pour le pseudo, mais pour l'adresse mail)
                     {
-                        if (filter_var($email, FILTER_VALIDATE_EMAIL))
+                        if (filter_var($email, FILTER_VALIDATE_EMAIL)) #vérification de l'existence du mail
                         {
                             if ($password == $password2)
                             {
-                                $password = hash('sha256', $password);
+                                $password = hash('sha256', $password); #hashage du mdp. le "sha256" est présent partout, je ne connais pas la raison
                                 $ip = $_SERVER['REMOTE_ADDR'];
 
                                 $insert = $bdd -> prepare ('INSERT_INTO utilisateurs(pseudo, email, password, ip) VALUES(:pseudo, :email, :password, :ip'); #tableau associatif
@@ -32,7 +32,7 @@
                                     'email' =>$email,
                                     'ip' =>$ip
                                     'password' => $password,
-
+                                        #crée un tableau avec ces informations
                                 ));
                                 header('Location: inscrption.php?reg_err=succés');
                             }else header('Location: inscription.php? reg_password');
@@ -42,3 +42,4 @@
         }else header ('Location:inscription.php?reg_err=already');
     }
 ?>
+
