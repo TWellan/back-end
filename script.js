@@ -1,7 +1,11 @@
-const showConnexion = document.getElementById('identification')
+const showConnexion = document.querySelector('.identification')
 const backToMain = document.querySelector('.accueil')
 const hide = document.getElementById('main')
 const show = document.getElementById('second')
+const formButtonConnexion = document.querySelector('.connexion')
+const formButtonInscription = document.querySelector('.inscription')
+const formConnexion = document.querySelector('.form1')
+const formInscription = document.querySelector('.form2')
 
 showConnexion.addEventListener('click', () =>
 {
@@ -23,3 +27,24 @@ backToMain.addEventListener('click', () =>
     show.style.display = "none";
 })
 
+formButtonConnexion.addEventListener('click', () =>
+{
+    formButtonConnexion.style.backgroundColor = "#7897BB";
+    formButtonConnexion.style.color = "#DBD6D2";
+    formButtonInscription.style.backgroundColor = "#223244";
+    formButtonInscription.style.color = "#7897BB";
+    formConnexion.style.display = "block";
+    formInscription.style.display = "none"
+}
+)
+
+formButtonInscription.addEventListener('click', () =>
+{
+    formButtonConnexion.style.backgroundColor = "#223244";
+    formButtonConnexion.style.color = "#7897BB";
+    formButtonInscription.style.backgroundColor = "#7897BB";
+    formButtonInscription.style.color = "#DBD6D2";
+    formConnexion.style.display = "none";
+    formInscription.style.display = "block";
+}
+)
