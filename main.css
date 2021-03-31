@@ -17,6 +17,10 @@ h3{
     font-size: 36px;
 }
 
+a{
+    text-decoration: none;
+}
+
 nav{
     padding: 25px 0;
     color: #DBD6D2;
@@ -33,7 +37,7 @@ nav ul{
     list-style-type: none;
 }
 
-a{
+nav ul li a{
     padding: 5px 10px;
     font-family: DIN Condensed, 'light';
     color: #DBD6D2;
@@ -41,7 +45,8 @@ a{
     border: 1px solid #DBD6D2;
     border-radius: 25px;
 }
-a:hover{
+
+nav ul li a:hover{
     color: #383D42;
     background-color: #DBD6D2;
 }
@@ -54,11 +59,11 @@ a:hover{
     justify-content: space-between;
 }
 
-div{
+.presentation{
     width: 500px;
 }
 
-.input{
+.container{
     width: 300px;
     background-color: #7897BB;
     border-radius: 15px;
@@ -67,22 +72,33 @@ div{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    padding: 30px;
-    width: 100%;
-    height: 40px;
-    margin: 0 auto;
-    margin-top: 250px;
-    padding: 25px 0;
+input{
+    width: 300px;
+    height: 30px;
+    font-family: Yanone Kaffeesatz;
+    font-size: 18px;
+    border-radius: 15px;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.button_page{
+    font-family: DIN Condensed, 'light';
+    color: #223244;
+    background-color: #7897BB;
+    text-decoration: none;
+    font-size: 25px;
+    border: 2px solid #223244;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.button_page:hover{
     color: #DBD6D2;
-    font-family: 12px;
-    background-color: #383D42;
-    text-align: center;
+    background-color: #223244;
 }
 
 #second{
@@ -93,11 +109,150 @@ footer{
     justify-content: space-between;
 }
 
-#connexion{
+.identification_container{
     width: 500px;
-    height: 500px;
+    height: 400px;
     margin: 0 auto;
     background-color: #7897BB;
-    border-radius: 15px;
-    padding: 50px 70px;
+    border-radius: 0px 0px 25px 25px;
+    padding: 120px 70px 0px 70px;
+    position: relative;
+    text-align: center;
+}
+
+.form_buttons{
+    margin: 0;
+    position: absolute;
+    top: -25px;
+    left: 0px;
+    display: flex;
+}
+
+.form_buttons a{
+    font-family: DIN Condensed, 'bold';
+    font-size: 36px;
+    padding: 20px 97px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.connexion{
+    color: #DBD6D2;
+    background-color: #7897BB;
+}
+
+.inscription{
+    color: #7897BB;
+    background-color: #223244;
+}
+
+.form1{
+    display: block;
+}
+.form2{
+    display: none;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.gauche{
+    display: flex;
+    flex-direction: column;
+}
+
+.lines{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.square{
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    margin-right: 50px;
+}
+
+.bloc{
+    width: 360px;
+    height: 90px;
+    border-radius: 5px;
+}
+
+.color1{
+    background-color: #7897BB;
+}
+
+.color2{
+    background-color: #223244;
+}
+
+.color3{
+    background-color: #FFFFFF;
+}
+
+.droite{
+    width: 600px;
+}
+.clic{
+    font-family: Tungsten, 'bold';
+    font-size: 80px;
+    color: #7897BB;
+    text-align: center;
+}
+
+.score{
+    font-family: Tungsten, 'bold';
+    font-size: 80px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.stateurl{
+    font-family: Yanone Kaffeesatz;
+    color: #223244;;
+    font-size: 18px;
+    text-align: center;
+}
+
+.buttons{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.buttons a{
+    padding: 5px 10px;
+    font-family: Yanone Kaffeesatz;
+    color: #223244;;
+    text-decoration: none;
+    border: 1px solid #223244;
+    border-radius: 25px;
+    justify-content: space-evenly;   
+}
+
+.buttons a:hover{
+    color: #FFFFFF;
+    background-color: #223244;
+}
+
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 250px;
+    padding: 25px 0;
+    font-family: 12px;
+    text-align: center;
+    color: #DBD6D2;
+    background-color: #383D42;
 }
