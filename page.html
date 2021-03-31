@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="description de ma page">
+        <link rel="stylesheet" href="second.css">
+        <title>Raccourcisseur d'url</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Me déconnecter</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="main">  
+                <div class="gauche">
+                    <div class="lines">
+                        <div class="square color2"></div>
+                        <a href="# "class="bloc color2 toSelect">URL</a>
+                    </div>
+                    <div class="lines">
+                        <div class="square color3"></div>
+                        <a href="#" class="bloc color3 toSelect showShortURL">CRÉER UN NOUVEAU LIEN</a>
+                    </div>
+                </div>
+                <div class="droite">
+                    <p class="clic">NOMBRE DE CLIC<br>SUR CE LIEN</p>
+                    <p class="score">0</p>
+                    <p class="stateurl">État du raccourcissement de l’url : ON</p>
+                    <div class="buttons">
+                        <a href="#" class="shorturloff">Désactivé le raccouris url</a>
+                        <a href="#" class="copy">Copier dans le presse papier</a>
+                    </div>
+                </div>
+                <div class="droite2">
+                    <h3>Entrez l’URL à raccourcir</h3>
+                    <form action="#" method="" onsubmit="return false">
+                        <input type="text" name="url" value="http://">
+                        <button type="submit" class="button_page">Créer un nouveau lien</button>
+                    </form>
+                </div>
+            </div>     
+        </main>
+        <footer>
+            © Catherine Ye - Sabrina Malki - Thomas Tarantino
+        </footer>
+    </body>
+    <script src="script2.js"></script>
+</html>
