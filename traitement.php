@@ -9,9 +9,12 @@
         $password2 = htmlspecialchars($_POST['password2']);
 
         $check=$bdd -> prepare('SELECT pseudo, email, password FROM utilisateurs WHERE email = ?');
-        $check ->execute (array($email));
+        $check ->execute [$email];
         $data = $check -> fetch ();
         $row = check->rowCount();
+        $bdd -> prepare "INSERT INTO 'utlisateurs' ('pseudo', 'email', 'password', 'password2') VALUES (?,?,?,?)";
+        $bdd->execute ([$pseudo, $email, $password, $password2]);
+        $result = $bdd-> fonction
 
         if ($row == 0)
         {

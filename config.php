@@ -1,7 +1,7 @@
 <?php
     try
     {
-        $bdd = PDO('mysql:host=localhost;dbname=inscription;charsert=utf8', 'root', '');
+        $bdd = PDO('mysql:host=localhost','dbname=inscription', 'root', '');
     } catch (Execption $e)
     {
         die('Erreur!'.$e->getMessage());

@@ -35,18 +35,18 @@
 
 
 <?php
-#$bdd = new PDO('mysql:host=localhost; dbname=test', 'root', ''); #Connexion au local host, nom de la table, nom utilisateur, mdp (ici: vide)
-/*if(isset($_POST ['forminscription']))*/
-/*{
+$bdd = new PDO('mysql:host=localhost'; 'dbname=test', 'root', ''); #Connexion au local host, nom de la table, nom utilisateur, mdp (ici: vide)
+if(isset($_POST ['forminscription']))*/
+{
     echo "Validé";
 }
 
-?>
+?> /*
 
 
-<html>
+<!--<html>
     <head>
-      <title> Inscription </title>
+    //  <title> Inscription </title>
       <meta charset="utf-8">
 </head>
 <body>
@@ -105,5 +105,5 @@
         </form>
     </div>
 </body>    
-</html>    */
+</html>    -->
 
