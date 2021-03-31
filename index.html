@@ -11,30 +11,71 @@
             <nav>
                 <ul>
                     <li><a href="#" class="accueil">Accueil</a></li>
-                    <li><a href="#" id="identification">M'identifier</a></li>
+                    <li><a href="#" class="identification">M'identifier</a></li>
                 </ul>
             </nav>
         </header>
         <!-- PREMIERE PAGE-->
         <div id="main">
-            <div>
+            <div class="presentation">
                 <h2>RACCOURCISSEUR D’URL</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magni facere sed autem vitae voluptate sequi blanditiis, est voluptatum aut deleniti sit eos esse sint quo repellendus impedit earum dolor.</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta magni facere sed autem vitae voluptate sequi blanditiis, est voluptatum aut deleniti sit eos esse sint quo repellendus impedit earum dolor.
+                </p>
             </div>
-            <div class="input">
+            <div class="container">
                 <h3>Entrez l’URL à raccourcir</h3>
-                <input type="text">
-                <a href="#">Créer un nouveau lien</a>
+                <form action="#" method="" onsubmit="return false">
+                    <input type="text" name="url" value="http://">
+                    <button type="submit" class="button_page">Créer un nouveau lien</button>
+                </form>
             </div>
         </div>
         <!-- SECONDE PAGE-->
         <div id="second">
-            <div id="connexion">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus est inventore saepe. Placeat, repudiandae nesciunt delectus dignissimos molestiae alias dolores reiciendis, nam praesentium iste enim sunt suscipit possimus eligendi hic.</p>
+            <!-- Page de connexion -->
+            <div class="identification_container">
+                <div class="form_buttons">
+                    <a href="#" class="connexion">Connexion</a>
+                    <a href="#" class="inscription">Inscription</a>
+                </div>
+                <div class="form1"> 
+                    <form action="connexion.php" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="Mettez votre mot de passe" required="required" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <button type="login" class="btn btn-primary btn-block button_page">Se connecter</button>
+                        </div>
+                    <form>
+                </div>
+                <!-- Page de d'inscription -->
+                <div class="form2">
+                    <form action="traitement.php" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Mettez votre email" required="required" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="Mettez votre mot de passe" required="required" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password2" class="form-control" placeholder="Retapez votre mot de passe" required="required" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block button_page">Inscription</button>
+                        </div>
+                    <form>
+                </div>
             </div>
         </div>
         <footer>
-            © Catherine Ye & Sabrina Malki
+            © Catherine Ye - Sabrina Malki - Thomas Tarantino
         </footer>
     </body>
     <script src="script.js"></script>
